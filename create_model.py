@@ -1,11 +1,10 @@
+import os.path
+
+import tensorflow as tf
 import numpy as np
 import pandas as pd
 from pathlib import Path
-import os.path
-import matplotlib.pyplot as plt
-from IPython.display import Image, display
 from sklearn.model_selection import train_test_split
-import tensorflow as tf
 
 
 image_dir = Path('Dataset')
