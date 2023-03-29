@@ -1,0 +1,10 @@
+pandas
+pathlib
+numpy
+ipython
+tensorflow
+django
+djangorestframework
+sklearn
+markdown
+django-filter
