@@ -1,3 +1,8 @@
 from django.contrib import admin
+from fish.models import Fish
 
-# Register your models here.
+
+@admin.register(Fish)
+class TeamAdmin(admin.ModelAdmin):
+    model = Fish
+

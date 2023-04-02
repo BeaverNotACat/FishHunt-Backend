@@ -18,8 +18,11 @@ from django.urls import path
 from django.urls import include
 from rest_framework import routers
 
+from fish.views import FishesViewSet
+
 
 router = routers.DefaultRouter()
+router.register('fishes_list', FishesViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
