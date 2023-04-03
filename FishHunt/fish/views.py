@@ -9,4 +9,5 @@ class FishesViewSet(viewsets.ModelViewSet):
     queryset = Fish.objects.all()
     filter_class = FishIdFilter
     serializer_class = FishSerializer
-
+    http_method_names = ['get']
+    

@@ -18,6 +18,7 @@ from django.urls import path
 from django.urls import include
 from rest_framework import routers
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from fish.views import FishesViewSet
 
 
@@ -28,3 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+
