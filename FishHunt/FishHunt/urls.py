@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 from rest_framework import routers
+from django.conf.urls.static import static
 
 from FishHunt.settings import MEDIA_URL, MEDIA_ROOT
 from fish.views import FishesViewSet
