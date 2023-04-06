@@ -10,4 +10,4 @@ class FishesViewSet(viewsets.ModelViewSet):
     filter_class = FishIdFilter
     serializer_class = FishSerializer
     http_method_names = ['get']
-    
+
