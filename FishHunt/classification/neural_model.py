@@ -8,7 +8,6 @@ from FishHunt.settings import MODEL_PATH
 model = tensorflow.keras.models.load_model(MODEL_PATH)
 
 
-
 class Model:
     '''Class that represents pretrained Neural Model'''
     def __init__(self) -> None:

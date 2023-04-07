@@ -3,9 +3,8 @@ from django.urls import path
 from django.urls import include
 from rest_framework import routers
 from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from FishHunt.settings import MEDIA_URL, MEDIA_ROOT, DEBUG
+from FishHunt.settings import MEDIA_URL, MEDIA_ROOT
 from fish.views import FishesViewSet
 from classification.views import ValidateFishViewSet
 
@@ -18,8 +17,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),]
 
-if DEBUG:
-    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
-else:
-    urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
 

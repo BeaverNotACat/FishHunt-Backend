@@ -2,6 +2,7 @@ from django.db import models
 
 from FishHunt.settings import MEDIA_PATH
 
+
 class Fish(models.Model):
     """A fish information"""
     name = models.CharField(max_length=40)
