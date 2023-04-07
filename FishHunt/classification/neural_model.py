@@ -2,7 +2,7 @@ import numpy
 import tensorflow 
 import pandas
 
-from FishHunt.settings import MODEL_PATH, LABELS
+from FishHunt.settings import MODEL_PATH
 
 
 model = tensorflow.keras.models.load_model(MODEL_PATH)
@@ -13,7 +13,6 @@ class Model:
     '''Class that represents pretrained Neural Model'''
     def __init__(self) -> None:
         self.model = model
-        self.labels = LABELS
         self.generator = tensorflow.keras.preprocessing.image.ImageDataGenerator(
     preprocessing_function=tensorflow.keras.applications.mobilenet_v2.preprocess_input)
 
@@ -37,6 +36,5 @@ class Model:
 
     def predict_fish_name(self, image_path:str) -> str:
         data = self._make_data_frame_iterator(self._make_image_data_frame(image_path))
-        return self.labels[
-                numpy.argmax(self.model.predict(data), axis=1)[0]]
+        return numpy.argmax(self.model.predict(data), axis=1)[0]
 

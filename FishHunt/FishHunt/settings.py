@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-_09bw%-xbqwognmnbp*@r&u1c16-&5p_uwz(oh#)o54r=xidw+
 # SECURITY WARNING: media/small_Halczeus_rozovohvostyj_Chalceus_macrolepidotus_AA_9_A4922_b4cdbb2bdd.jpgdon't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.ngrok.io']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.20.228', '.ngrok.io']
 
 CSRF_TRUSTED_ORIGINS=['https://*.ngrok.io']
 
@@ -128,16 +128,6 @@ MEDIA_PATH = ''
 
 # Neural model
 MODEL_PATH = '../model_weights'
-
-LABELS = {0: 'Black Sea Sprat',
-          1: 'Gilt-Head Bream',
-          2: 'Hourse Mackerel',
-          3: 'Red Mullet',
-          4: 'Red Sea Bream',
-                         5: 'Sea Bass',
-                         6: 'Shrimp',
-                         7: 'Striped Red Mullet',
-                         8: 'Trout'}
 
 TEMP_FILE_PATH = 'static/media/temp.png'
 
