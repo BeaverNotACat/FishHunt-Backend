@@ -35,7 +35,6 @@ class ValidateFishViewSet(viewsets.ViewSet):
         try: prediction = self.neural_model.predict_fish_name(image_path=TEMP_FILE_PATH)
         except: return Response({'details': 'Picture cannot be processed'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        print(prediction)
-        print(fish.model_label)
+
         return Response({'result': prediction == fish.model_label})
 
