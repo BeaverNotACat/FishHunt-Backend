@@ -128,5 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#Dataset_for
+#Dataset_folder
 Dataset/Fish_Dataset
+
+#Fish photos
+FishHunt/static/
