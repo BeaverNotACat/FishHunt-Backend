@@ -12,10 +12,15 @@ Prodject consists of
 2. Upload a dataset for training. It must have a following structure (there may be any fish folders ofc):
 
     Dataset/
+    
     ├─ Fish_Dataset/
+    
     │  ├─ Fish1/
+    
     │  │  ├─ *.jpg
+    
     │  ├─ Fish2/
+    
     │  │  ├─ *.jpg
     
 3. Run a *create_model.ipynb* notebook to create your's neural model
