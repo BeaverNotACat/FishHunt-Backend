@@ -33,7 +33,7 @@ This code is totally free to use and modify if you have concrete author
 ## Author
 - Telegram: @BeaverNotACat
 - Discord: Бобр#0977
-- IRL Vanya
+- IRL: Vanya
 
 ## Thanks to
 - All personel Department of pre-university education
