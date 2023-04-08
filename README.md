@@ -10,7 +10,7 @@ Prodject consists of
 1. install requirmented librarys
     > pip install -r requirments.txt
 2. Upload a dataset for training. It must have a following structure (there may be any fish folders ofc):
-    >Dataset/
+    Dataset/
     ├─ Fish_Dataset/
     │  ├─ Fish1/
     │  │  ├─ *.jpg
