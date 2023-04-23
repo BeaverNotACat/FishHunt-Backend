@@ -25,8 +25,10 @@ Prodject consists of
     
 3. Run a *create_model.ipynb* notebook to create your's neural model
     > jupyter-lab
-4. Run a server
-    > cd Fishhunt && python manage.py runserver
+4. Migrate a database
+    > cd Fishhunt && python manage.py migrate
+5. Run a server
+    > python manage.py runserver
 
 ## Usage
 1. Create user for django admin panel
