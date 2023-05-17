@@ -9,3 +9,4 @@ sklearn
 markdown
 django-filter
 drf_extra_fields
+Pillow
