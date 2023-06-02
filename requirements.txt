@@ -11,3 +11,4 @@ django-filter
 drf_extra_fields
 pillow
 django-environ
+django-jazzmin
