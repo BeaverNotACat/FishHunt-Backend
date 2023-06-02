@@ -1,7 +1,6 @@
 import base64
 
-from rest_framework import status
-from rest_framework import viewsets
+from rest_framework import status, viewsets
 from rest_framework.response import Response
 
 from FishHunt.settings import TEMP_FILE_PATH

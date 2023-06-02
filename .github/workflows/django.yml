@@ -8,7 +8,9 @@ on:
 
 jobs:
   build:
-
+    env:
+      Debug: 'on'
+      SECRET_KEY: 'really-secret-i-swear'
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -27,4 +29,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        cd FishHunt && python manage.py test
+        python FishHunt/manage.py test

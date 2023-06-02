@@ -1,29 +1,32 @@
 import os
 
+import environ
 from pathlib import Path
 
-from django.core.management.utils import get_random_secret_key
+
+# Initialise environment variables
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_random_secret_key()
+DEBUG = env('DEBUG')
 
-# SECURITY WARNING: media/small_Halczeus_rozovohvostyj_Chalceus_macrolepidotus_AA_9_A4922_b4cdbb2bdd.jpgdon't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.20.228', '.ngrok.io']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.ngrok.io']
 
 CSRF_TRUSTED_ORIGINS=['https://*.ngrok.io']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,7 +132,7 @@ MEDIA_URL = 'media/'
 MEDIA_PATH = ''
 
 # Neural model
-MODEL_PATH = '../model_weights'
+MODEL_PATH = f'{BASE_DIR}/model_weights'
 
 TEMP_FILE_PATH = 'static/media/temp.png'
 
